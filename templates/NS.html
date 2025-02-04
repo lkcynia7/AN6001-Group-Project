@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='ns_styles.css') }}">
     <title>News Sentiment Analysis</title>
 </head>
 <body>
@@ -17,17 +17,21 @@
 
         <!-- 如果有错误消息，显示错误 -->
         {% if error %}
-        <p style="color: red;">{{ error }}</p>
+        <p class="error-message">{{ error }}</p>
         {% endif %}
 
         <!-- 如果输入了股票代码，显示新闻和图表 -->
         {% if ticker %}
         <h3>Latest News for {{ ticker }}</h3>
-        <ul>
+        <div class="news-list">
             {% for item in news %}
-            <li><a href="{{ item['URL'] }}" target="_blank">{{ item['Title'] }}</a></li>
+            <div class="news-item">
+                <p><strong>{{ item['Published Date'] }}</strong></p>
+                <p>{{ item['Title'] }}</p>
+                <a href="{{ item['URL'] }}" target="_blank">Read more...</a>
+            </div>
             {% endfor %}
-        </ul>
+        </div>
 
         <!-- 如果存在情绪图表，显示图表 -->
         {% if plot_url %}
@@ -35,6 +39,12 @@
         <img src="data:image/png;base64,{{ plot_url }}" class="image-class">
         {% endif %}
         {% endif %}
+
+        <!-- 返回按钮 -->
+        <div class="back-button">
+            <a href="/main" class="btn">Back to Home</a>
+            <a href="/NS" class="btn">Back to News Sentiment Analysis</a>
+        </div>
     </div>
 </body>
 </html>
