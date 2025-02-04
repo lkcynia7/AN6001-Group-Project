@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>News Sentiment Analysis</title>
+</head>
+<body>
+    <div class="container">
+        <h2>News Sentiment Analysis</h2>
+        <!-- 股票代码输入框 -->
+        <form action="/NS" method="POST">
+            <input type="text" name="ticker" placeholder="Enter Stock Ticker" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- 如果有错误消息，显示错误 -->
+        {% if error %}
+        <p style="color: red;">{{ error }}</p>
+        {% endif %}
+
+        <!-- 如果输入了股票代码，显示新闻和图表 -->
+        {% if ticker %}
+        <h3>Latest News for {{ ticker }}</h3>
+        <ul>
+            {% for item in news %}
+            <li><a href="{{ item['URL'] }}" target="_blank">{{ item['Title'] }}</a></li>
+            {% endfor %}
+        </ul>
+
+        <!-- 如果存在情绪图表，显示图表 -->
+        {% if plot_url %}
+        <h3>Sentiment vs Relevance</h3>
+        <img src="data:image/png;base64,{{ plot_url }}" class="image-class">
+        {% endif %}
+        {% endif %}
+    </div>
+</body>
+</html>
