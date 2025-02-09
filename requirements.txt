@@ -1,6 +1,8 @@
 flask
 gunicorn
 yfinance
+pandas
 google.generativeai
+matplotlib
 prettytable
 markdown
