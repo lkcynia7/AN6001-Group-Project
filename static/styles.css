@@ -7,7 +7,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden;  /* 禁止页面整体滚动 */
 }
 
 .container {
@@ -18,16 +17,28 @@ body {
     max-width: 600px;
     width: 100%;
     text-align: center;
-    overflow-y: auto;  /* 允许竖向滚动 */
-    height: 80vh;  /* 设置容器的最大高度 */
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
-h4 {
+.image-class {
+    max-width: 100%; 
+    height: auto;  
+    border-radius: 8px;
+    margin-bottom: 20px; 
+    display: block;
+}
+
+h2 {
     font-size: 26px;
     margin-bottom: 20px;
     color: #333;
-    word-wrap: break-word;  /* 保证长文本不会超出 */
-    overflow-wrap: break-word;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #5f130f;
 }
 
 form {
@@ -67,6 +78,7 @@ button:hover {
     background-color: #5f130f;
 }
 
+
 p {
     margin-top: 20px;
     font-size: 16px;
@@ -89,6 +101,7 @@ th, td {
 th {
     background-color: #CBB2AB;
     text-align: center;
+
 }
 
 @media (max-width: 768px) {
@@ -96,7 +109,7 @@ th {
         padding: 20px;
     }
 
-    h4 {
+    h2 {
         font-size: 20px;
     }
 
@@ -107,4 +120,11 @@ th {
     p {
         font-size: 15px;
     }
+}
+
+.logo-img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: auto
 }
