@@ -1,18 +1,16 @@
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='ms_styles.css') }}">
+    <link rel="stylesheet" href="{{url_for('static',filename='lr_styles.css')}}">
 </head>
 
 <body>
     <div class="container">
         <h2>Basic Financial Information of {{company_name}}</h2>
-        
-        <!-- 表格的外部包装器，启用左右滚动 -->
+
         <div class="table-wrapper">
             <table>{{ financial_info|safe }}</table>
         </div>
-        
-        <!-- 提交按钮 -->
+
         <form action="/info" method="post">
             <p><input type="submit" value="Company Information"></p>
         </form>

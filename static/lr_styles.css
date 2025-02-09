@@ -5,9 +5,9 @@ body {
     padding: 20px;
     display: flex;
     justify-content: center;
-    align-items: flex-start; 
+    align-items: flex-start;
     min-height: 100vh;
-    border: 1px solid red;  
+    border: 1px solid red;
 }
 
 .container {
@@ -19,24 +19,31 @@ body {
     width: 90%;
     box-sizing: border-box;
     position: relative;
-    margin-top: 40px;  /* 增加上边距，防止和标题重叠 */
+    margin-top: 40px; /* 增加上边距，防止和标题重叠 */
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
 }
 
 .table-wrapper {
-    display: flex;
-    justify-content: center;
+    display: block;  /* 将 display 改为 block */
+    overflow-x: auto; /* 让表格超出时可滚动 */
     width: 100%;
-    overflow-x: auto; /* ✅ 使表格超出时可滚动 */
-    margin-top: 30px; /* ✅ 保证表格不会和标题重叠 */
+    margin-top: 30px;
 }
 
 table {
-    min-width: 600px; /* ✅ 设置最小宽度避免表格被压缩 */
-    width: 100%; /* ✅ 让表格填满容器 */
+    width: 100%;  /* 让表格填满容器 */
     max-width: 100%;
     border-collapse: collapse;
     background-color: #fff;
     text-align: center;
+    margin: 0 auto; /* 使表格居中 */
+    min-width: 600px;  /* 设置最小宽度，避免表格压缩 */
 }
 
 th, td {
@@ -46,13 +53,6 @@ th, td {
 
 th {
     background-color: #CBB2AB;
-    text-align: center;
-}
-
-h2 {
-    font-size: 28px;
-    margin-bottom: 20px;  /* 增加间距，避免标题和表格太近 */
-    color: #333;
     text-align: center;
 }
 
@@ -113,6 +113,6 @@ button:hover {
     }
 
     .table-wrapper {
-        margin-top: 20px; /* 让表格不与标题重叠 */
+        margin-top: 20px;
     }
 }

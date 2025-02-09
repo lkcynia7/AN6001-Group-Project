@@ -1,0 +1,191 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    min-height: 100vh;
+    border: 1px solid red;  
+}
+
+.container {
+    background-color: #f5eeee;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1100px;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.table-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow-x: auto; /* ✅ 让表格超出时可滚动 */
+}
+
+table {
+    width: 100%; /* ✅ 让 table 填满 container */
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+th, td {
+    padding: 10px 15px;
+    border: 1px solid #5f130f;
+}
+
+th {
+    background-color: #CBB2AB;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+}
+
+form {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 60%;
+    padding: 12px 18px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #5f130f;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5f130f;
+}
+
+.error-message {
+    color: red;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.news-list {
+    max-height: 300px;
+    overflow-y: scroll;
+    margin-top: 20px;
+    padding-right: 10px;
+}
+
+.news-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.news-item p {
+    margin: 5px 0;
+}
+
+.news-item a {
+    color: #7d1714;
+    text-decoration: underline;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
+
+.image-class {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 30px 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    form input[type="text"] {
+        width: 70%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .news-item {
+        font-size: 14px;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.back-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.back-button .btn {
+    background-color: #5f130f;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-button .btn:hover {
+    background-color: #5f130f;
+}
+
+input[type="submit"] {
+    background-color: #5f130f;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+}
