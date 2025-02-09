@@ -5,9 +5,10 @@
 
 <body>
     <div class="container">
-        <h4>Reply {{r}}</h4>
-        <form action="/" method="get">
-            <p><input type="submit" value="Back"></p>
+        <h2>Basic Introduction of {{company_name}}</h2>
+        <table>{{company_info|safe}}</table>
+        <form action="/info" method="post">
+            <p><input type="submit" value="Company Information"></p>
         </form>
     </div>
 </body>

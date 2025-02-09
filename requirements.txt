@@ -1,0 +1,6 @@
+flask
+gunicorn
+yfinance
+google.generativeai
+prettytable
+markdown

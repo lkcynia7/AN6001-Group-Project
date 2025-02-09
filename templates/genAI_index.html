@@ -7,7 +7,7 @@
 <body>
     <div class="container">
         <h2>GenAI Assistant</h2>
-        <form action="/genAI_result" method="post">
+        <form action="/genAI_result_index" method="post">
             <p><input type="text" name="q" placeholder="Please enter your question" required></p>
             <p><input type="submit" value="Enter"></p>
         </form>
@@ -18,8 +18,8 @@
             <div>{{ r|safe }}</div>
         {% endif %}
 
-        <form action="/main" method="get">
-            <p><input type="submit" value="Main"></p>
+        <form action="/" method="get">
+            <p><input type="submit" value="Back"></p>
         </form>
     </div>
 </body>
