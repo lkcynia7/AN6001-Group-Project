@@ -15,6 +15,7 @@ api = os.getenv("makersuite")
 genai.configure(api_key = api)
 model = genai.GenerativeModel("gemini-1.5-flash")
 app = Flask(__name__)
+app.secret_key = os.getenv("FLASK_SECRET_KEY", "your_default_secret_key")
 
 def plot_stock_price(stock_code):
     stock = yf.Ticker(stock_code)
