@@ -19,6 +19,7 @@ body {
     width: 90%;
     box-sizing: border-box;
     position: relative;
+    margin-top: 40px;  /* 增加上边距，防止和标题重叠 */
 }
 
 .table-wrapper {
@@ -26,7 +27,7 @@ body {
     justify-content: center;
     width: 100%;
     overflow-x: auto; /* ✅ 使表格超出时可滚动 */
-    margin-top: 20px;
+    margin-top: 30px; /* ✅ 保证表格不会和标题重叠 */
 }
 
 table {
@@ -50,14 +51,9 @@ th {
 
 h2 {
     font-size: 28px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;  /* 增加间距，避免标题和表格太近 */
     color: #333;
     text-align: center;
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%); /* ✅ 使标题始终在屏幕中间 */
-    z-index: 1;
 }
 
 form {
@@ -78,7 +74,6 @@ input[type="submit"] {
     transition: background-color 0.3s ease;
     width: 100%;
     max-width: 300px;
-    z-index: 1;
 }
 
 button {
@@ -90,7 +85,6 @@ button {
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    z-index: 1;
 }
 
 button:hover {
