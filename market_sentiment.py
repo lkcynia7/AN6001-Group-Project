@@ -5,7 +5,7 @@ import io
 import base64
 from datetime import datetime
 
-API_KEY = '502SQHC4SU99N03B'
+API_KEY = 'ER8IXZ7405F7N8EO'
 BASE_URL = 'https://www.alphavantage.co/query'
 FUNCTION = 'NEWS_SENTIMENT'
 
